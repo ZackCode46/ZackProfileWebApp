@@ -14,24 +14,16 @@ navLinks.forEach(link => {
   });
 });
 
-// Leaflet.js map setup for Kalimulya, Depok, West Java
-<<<<<<< HEAD
-const map = L.map('map').setView([-6.390451, 106.838879], 16);
-=======
+// Leaflet.js map setup for Kalimulya, Depok
 const map = L.map('map').setView([-6.419622, 106.840070], 16);
->>>>>>> f86d77031bab0ba8dae96524b50f7ce1bdc88eee
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-<<<<<<< HEAD
-L.marker([-6.390451, 106.838879])
-=======
 L.marker([-6.419622, 106.840070])
->>>>>>> f86d77031bab0ba8dae96524b50f7ce1bdc88eee
   .addTo(map)
-  .bindPopup('Cilodong, Depok, West Java')
+  .bindPopup('Jl. Raya Kalimulya No.49, Cilodong, Depok')
   .openPopup();
 
 // Contact form to WhatsApp
