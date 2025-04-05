@@ -15,13 +15,13 @@ navLinks.forEach(link => {
 });
 
 // Leaflet.js map setup for Kalimulya, Depok, West Java
-const map = L.map('map').setView([-6.396975, 106.832684], 15);
+const map = L.map('map').setView([-6.390451, 106.838879], 16);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-L.marker([-6.396975, 106.832684])
+L.marker([-6.390451, 106.838879])
   .addTo(map)
   .bindPopup('Kalimulya, Depok, West Java')
   .openPopup();
