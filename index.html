@@ -2,77 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fazila Zaki Ahmad - Personal Website" />
-  <meta name="keywords" content="Fazila Zaki Ahmad, CV, Portofolio, Web Developer, App Developer, IoT, Embedded Systems, Contact, Social Media" />
-  <meta name="author" content="Fazila Zaki Ahmad" />
-  <title>Fazila Zaki Ahmad | Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script defer src="assets/js/script.js"></script>
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zack Portfolio</title>
+  <meta name="description" content="Portfolio resmi Fazila Zaki Ahmad - IoT & Embedded Developer dengan berbagai proyek Arduino, aplikasi, dan website.">
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Fazila Zaki Ahmad</h1>
-    <img src="assets/images/zaki_profile.jpg" alt="Fazila Zaki Ahmad" class="profile-pic" />
-    <p>IoT Architect • Embedded Systems Development • Web & App Developer • Electrical & Network Cabling Technician • Martial Arts</p>
+  <header class="header" data-aos="fade-down">
+    <div class="container">
+      <h1>Zack's Web Profile</h1>
+      <p class="subtitle">IoT & Embedded Developer</p>
+      <div class="language-switcher">
+        <button onclick="setLanguage('id')">🇮🇩</button>
+        <button onclick="setLanguage('en')">🇬🇧</button>
+      </div>
+    </div>
   </header>
 
-  <div class="menu">
-    <button class="menu-button" data-target="profile">Profile</button>
-    <button class="menu-button" data-target="cv">CV</button>
-    <button class="menu-button" data-target="portofolio">Portfolio</button>
-    <button class="menu-button" data-target="social">Social</button>
-    <button class="menu-button" data-target="contact">Contact</button>
-    <button class="menu-button" data-target="location">Location</button>
-  </div>
+  <!-- Profile Section -->
+  <section class="about-section" data-aos="fade-up">
+    <div class="container">
+      <img src="assets/images/foto_profil.jpg" alt="Zack's Profile" class="profile-img" />
+      <h2 data-lang="about-title">About Me</h2>
+      <p data-lang="about-desc">Saya adalah seorang pengembang IoT dan sistem embedded dengan latar belakang teknik dan hasrat dalam mempelajari/mengembangkan teknologi masa depan.</p>
+      <a href="assets/images/cv.jpg" class="button" data-lang="view-cv">Lihat CV</a>
+      <a href="https://zackcode46.github.io/portfolioweb/" class="button" data-lang="view-portfolio">Lihat Portfolio</a>
+      <p data-lang="short-profile">Profil singkat tentang saya</p>
+      <a href="https://zackcode46.blogspot.com/2025/03/halo-selamat-datang-di-blog-ini-jadi.html" class="button" data-lang="view-blog">Lihat Blog profil pribadi saya</a>
+    </div>
+  </section>
 
-  <div id="profile" class="tab-content active">
-    <h2>Profile</h2>
-    <p>I'm Fazila Zaki Ahmad, tech explorer passionate in IoT and Embedded System Development. Currently studying at Gunadarma University (2024–2028).</p>
-    <p class="blog-link">More about me: <a href="https://zackcode46.blogspot.com/2025/03/halo-selamat-datang-di-blog-ini-jadi.html" target="_blank">Profile Blog</a></p>
-  </div>
+  <!-- Projects Section -->
+<section class="projects-section" data-aos="fade-up">
+  <div class="container">
+    <h2 data-lang="my-projects">My Projects</h2>
+    <div class="tabs">
+      <button class="tab-link" data-tab="arduino-projects">Arduino Projects</button>
+      <button class="tab-link" data-tab="software-projects">Software Projects</button>
+    </div>
 
-  <div id="cv" class="tab-content">
-    <h2>CV</h2>
-    <img src="assets/images/cv_fazilaz.jpg" alt="CV Image" class="responsive-img" />
-  </div>
+    <div id="arduino-projects" class="tab-content">
+      <div class="project-card" data-aos="zoom-in">
+        <h3>Lampu Otomatis dengan Sensor IR</h3>
+        <p>Smartlamp menggunakan sensor IR. Saat objek melewati sensor, maka lampu akan menyala.</p>
+        <div class="project-gallery">
+          <div class="gallery-scroll">
+            <a href="#"><img src="assets/images/autolamp_ir.jpg" alt="IR Project 1"></a>
+            <a href="#"><img src="assets/images/autolamp.jpg" alt="IR Project 2"></a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Robot Line Follower Tanpa Arduino</h3>
+        <p>Robot ini menggunakan sensor LDR untuk mengikuti garis hitam tanpa Arduino.</p>
+        <div class="project-gallery">
+          <div class="gallery-scroll">
+            <a href="#"><img src="assets/images/gerobakpintar.jpg" alt="Line Follower 1"></a>
+            <a href="#"><img src="assets/images/gerobak2.jpg" alt="Line Follower 2"></a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Lampu Otomatis dengan Sensor Jari (OpenCV & MediaPipe)</h3>
+        <p>Mendeteksi gerakan jari untuk mengontrol lampu melalui Arduino.</p>
+        <div class="project-gallery">
+          <div class="gallery-scroll">
+            <a href="#"><img src="assets/images/opencv.jpg" alt="Finger Sensor 1"></a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+        <h3>Arduino Radar dengan Buzzer dan LED</h3>
+        <p>Deteksi objek dalam jarak 0-10 cm dan aktifkan buzzer serta LED sebagai peringatan.</p>
+        <div class="project-gallery">
+          <div class="gallery-scroll">
+            <a href="#"><img src="assets/images/radar.jpg" alt="Radar Project"></a>
+          </div>
+        </div>
+      </div>
+      <p><a href="https://zackcode46.blogspot.com/2025/03/proyek-arduino-lampu-otomatis-robot.html" target="_blank" class="button">Visit Arduino Blog</a></p>
+    </div>
 
-  <div id="portofolio" class="tab-content">
-    <h2>Portfolio</h2>
-    <img src="assets/images/portofolio_zaki.jpg" alt="Portfolio Image" class="responsive-img" />
-    <p>See my projects here:</p>
-    <p class="blog-link"><a href="https://zackcode46.blogspot.com/2025/03/proyek-arduino-lampu-otomatis-robot.html" target="_blank">Visit Projects Blog</a></p>
-  </div>
-
-  <div id="social" class="tab-content">
-    <h2>Social Media</h2>
-    <div class="social-links">
-      <a href="https://github.com/ZackCode46" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/fazila-zaki-1471b2335" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/fazilazakiahmd" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/share/1EE8vobXXX/" target="_blank">Facebook</a>
+    <div id="software-projects" class="tab-content" style="display:none;">
+      <div class="project-card" data-aos="zoom-in">
+        <h3>Smartech Garden Application (masih dalam tahap pengembangan)</h3>
+        <p>Monitoring dan kontrol tanaman via aplikasi dan ESP serta SQL(Database).</p>
+        <div class="project-gallery">
+          <div class="gallery-scroll">
+            <a href="#"><img src="assets/images/smartechgarden_app.jpg" alt="App Screenshot 1"></a>
+            <a href="#"><img src="assets/images/web_smartechgarden.jpg" alt="App Screenshot 2"></a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Smartech Garden Website</h3>
+        <p>Monitoring dan kontrol tanaman via web dan ESP.</p>
+        <div class="project-gallery">
+          <div class="gallery-scroll">
+            <a href="#"><img src="assets/images/mockup_web.jpg" alt="Web Screenshot"></a>
+          </div>
+        </div>
+      </div>
+      <p><a href="https://zackcode46.github.io/smartechgarden/" target="_blank" class="button">Visit Software Project</a></p>
     </div>
   </div>
+</section>
 
-  <div id="contact" class="tab-content">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" id="name" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send via WhatsApp</button>
-    </form>
-  </div>
 
-  <div id="location" class="tab-content">
-    <h2>My Location</h2>
-    <div id="map"></div>
-  </div>
+  <!-- Contact Section -->
+  <section class="contact-section" data-aos="fade-up">
+    <div class="container">
+      <h2 data-lang="contact-me">Contact Me</h2>
+      <p data-lang="contact-desc">Hubungi saya melalui WhatsApp atau sosial media di bawah ini.</p>
+      <a href="https://wa.me/6289653720025?text=Halo%20Zack!%20Saya%20tertarik%20dengan%20portfolio%20Anda." class="button">WhatsApp</a>
+      <div class="social-links">
+        <a href="https://zackcode46.github.io/WebsiteProyekz/" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/fazilazakiahmd?igsh=NGVnY3BhbHYzNzh1" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/share/1EE8vobXXX/" target="_blank">Facebook</a>
+        <a href="https://www.linkedin.com/in/fazila-zaki-1471b2335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Fazila zaki ahmad. All rights reserved.</p>
+  <footer class="footer" data-aos="fade-up">
+    <p>&copy; 2025 Fazila Zaki Ahmad. All rights reserved.</p>
   </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    // Tab switching
+    document.querySelectorAll('.tab-link').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+        document.getElementById(this.dataset.tab).style.display = 'block';
+      });
+    });
+
+    // Language switcher
+    const translations = {
+      id: {
+        'about-title': 'Tentang Saya',
+        'about-desc': 'Saya adalah seorang pengembang IoT dan sistem embedded dengan latar belakang teknik dan hasrat dalam teknologi masa depan.',
+        'view-cv': 'Lihat CV',
+        'view-portfolio': 'Lihat Portfolio',
+        'short-profile': 'Profil singkat tentang saya',
+        'view-blog': 'Lihat Blog profil pribadi saya',
+        'my-projects': 'Proyek Saya',
+        'contact-me': 'Hubungi Saya',
+        'contact-desc': 'Hubungi saya melalui WhatsApp atau sosial media di bawah ini.'
+      },
+      en: {
+        'about-title': 'About Me',
+        'about-desc': 'I am an IoT and embedded systems developer with an engineering background and passion for study/develop future technologies.',
+        'view-cv': 'View CV',
+        'view-portfolio': 'View Portfolio',
+        'short-profile': 'A short profile about me',
+        'view-blog': 'View My Personal Blog',
+        'my-projects': 'My Projects',
+        'contact-me': 'Contact Me',
+        'contact-desc': 'Contact me via WhatsApp or social media below.'
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        const key = el.getAttribute('data-lang');
+        el.textContent = translations[lang][key];
+      });
+    }
+  </script>
 </body>
 </html>
